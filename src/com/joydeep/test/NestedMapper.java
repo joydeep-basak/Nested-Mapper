@@ -198,18 +198,24 @@ public class NestedMapper<V> {
 		tax.setMstrName("TEST");
 		tax.setMstrNum(12354);
 		tax.setTaxRate(12345);
+		tax.setNum(1234555);
+		tax.setType(55);
+		tax.setName("TEST NAME");
 		taxes.add(tax);
 		
 		res.setTaxes(taxes);
 		
-		NestedMapper mapper = new NestedMapper();
+		System.out.println(res);
+		
+		NestedMapper<?> mapper = new NestedMapper<>();
+		TaxResponseDTO responseDTO = null;
 		try {
-			mapper.iterateAndCopyProperties(res, TaxResponseDTO.class);
+			responseDTO = mapper.iterateAndCopyProperties(res, TaxResponseDTO.class);
 		} catch (InstantiationException | IllegalAccessException | NoSuchFieldException | SecurityException
 				| ClassNotFoundException | NoSuchMethodException | IllegalArgumentException | InvocationTargetException e) {
 			e.printStackTrace();
 		}
 		
-		System.out.println();
+		System.out.println(responseDTO);
 	}
 }

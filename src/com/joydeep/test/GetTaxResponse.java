@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+@ToString
 public class GetTaxResponse  {
 	
 	private String locRef;

@@ -5,7 +5,9 @@ import java.util.List;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
+@ToString
 public class TaxResponseDTO {
 	
 	private String locRef;

@@ -2,13 +2,12 @@ package com.joydeep.test;
 
 import java.util.Date;
 
-import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
 
+@ToString
 public class Tax {
 
-	private int num;
+	private long num;
 	
 	private String name;
 	
@@ -24,11 +23,11 @@ public class Tax {
 	
 	private Date effToDt;
 
-	public int getNum() {
+	public long getNum() {
 		return num;
 	}
 
-	public void setNum(int num) {
+	public void setNum(long num) {
 		this.num = num;
 	}
 
